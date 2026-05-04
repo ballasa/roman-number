@@ -9,6 +9,7 @@ on:
 
 # Setup:
 # - Selezione di un runner ubuntu-based;
+# - Checkout del codice;
 # - Set up di Java 11.
 jobs:
   build:
@@ -31,6 +32,5 @@ jobs:
         run: mvn -B test --file pom.xml
 
       # Analisi statica (fase di package)
-      # To do: rimuovere il commento quando checkstyle (issue #3) sarà completato
-      # - name: Analisi statica
-      #   run: mvn -B checkstyle:check --file pom.xml
+      - name: Analisi statica
+        run: mvn -B checkstyle:check --file pom.xml
