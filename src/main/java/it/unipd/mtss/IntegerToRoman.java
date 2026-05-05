@@ -6,9 +6,14 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
-    public static String convert(int number)
-    {
-        //to do
-        return null;
+    public static String convert(int number){
+        StringBuilder result = new StringBuilder();
+
+        while(number>=1){
+            result.append("I");
+            number--;
+        }
+
+        return result.toString();
     }
 }
