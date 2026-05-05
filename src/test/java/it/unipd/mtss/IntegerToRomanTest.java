@@ -11,7 +11,7 @@ import org.junit.Test;
 public class IntegerToRomanTest {
     @Test
     public void testConvertOne(){
-        //Arrange (configuraione):
+        //Arrange (configurazione):
         int number=1;
 
         //Act (esecuzione del metodo da testare):
@@ -43,5 +43,41 @@ public class IntegerToRomanTest {
 
         //Assert:
         assertEquals("III", result);
+    }
+
+    @Test
+    public void testConvertFour(){
+        //Arrange:
+        int number = 4;
+
+        //Act:
+        String result = IntegerToRoman.convert(number);
+
+        //Assert:
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void testConvertFive(){
+        //Arrange:
+        int number = 5;
+
+        //Act:
+        String result = IntegerToRoman.convert(number);
+
+        //Assert:
+        assertEquals("V", result);
+    }
+
+    @Test
+    public void testConvertSix(){
+        //Arrange:
+        int number = 6;
+
+        //Act:
+        String result = IntegerToRoman.convert(number);
+
+        //Assert:
+        assertEquals("VI", result);
     }
 }
