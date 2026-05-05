@@ -18,6 +18,16 @@ public class IntegerToRoman {
     public static String convert(int number){
         StringBuilder result = new StringBuilder();
 
+        while(number>=10){
+            result.append("X");
+            number-=10;
+        }
+
+        while(number>=9){
+            result.append("IX");
+            number-=9;
+        }
+        
         while(number>=5){
             result.append("V");
             number-=5;
