@@ -80,4 +80,20 @@ public class IntegerToRomanTest {
         //Assert:
         assertEquals("VI", result);
     }
+
+    @Test
+    public void testConvertSeven(){
+        //Pattern AAA compatto:
+        assertEquals("VII", IntegerToRoman.convert(7));
+    }
+
+    @Test
+    public void testConvertNine(){
+        assertEquals("IX", IntegerToRoman.convert(9));
+    }
+
+    @Test
+    public void testConvertTen(){
+        assertEquals("X", IntegerToRoman.convert(10));
+    }
 }
