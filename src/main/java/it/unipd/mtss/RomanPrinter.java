@@ -80,6 +80,9 @@ public class RomanPrinter {
                 case 'X':
                     matrix[i]=getAscii_X();
                     break;
+                case 'L':
+                    matrix[i]=getAscii_L();
+                    break;
                 default:
                     //Se è una lettera non supportara lancia un errore;
                     throw new IllegalArgumentException("Carattere non supportato: " + c);
@@ -133,6 +136,22 @@ public class RomanPrinter {
             " /  \\  ",
             "/ /\\ \\ ",
             "\\/  \\/ "
+        };
+    }
+
+    /**
+     * Fornisce il disegno Ascii della lettera L.
+     * 
+     * @return un array di 6 stringhe che rappresentano le righe della lettera L.
+     */
+    private static String[] getAscii_L() {
+        return new String[]{
+            " _      ",
+            "| |     ",
+            "| |     ",
+            "| |     ",
+            "| |____ ",
+            "|______|"
         };
     }
 }
