@@ -74,6 +74,9 @@ public class RomanPrinter {
                 case 'I': 
                     matrix[i]=getAscii_I(); 
                     break;
+                case 'V':
+                    matrix[i]=getAscii_V();
+                    break;
                 default:
                     //Se è una lettera non supportara lancia un errore;
                     throw new IllegalArgumentException("Carattere non supportato: " + c);
@@ -95,6 +98,22 @@ public class RomanPrinter {
             "  | |  ",
             " _| |_ ",
             "|_____|"
+        };
+    }
+
+    /**
+     * Fornisce il disegno Ascii della lettera V.
+     * 
+     * @return un array di 6 stringhe che rappresentano le righe della lettera V.
+     */
+    private static String[] getAscii_V() {
+        return new String[]{
+            "__      __",
+            "\\ \\    / /",
+            " \\ \\  / / ",
+            "  \\ \\/ /  ",
+            "   \\  /   ",
+            "    \\/    "
         };
     }
 }
