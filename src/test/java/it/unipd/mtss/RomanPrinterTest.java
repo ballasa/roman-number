@@ -65,4 +65,23 @@ public class RomanPrinterTest {
         //Assert:
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintAsciiFour(){
+        //Arrange:
+        int number=4;
+
+        //Act:
+        String expected = 
+            " _____ __      __\n" +
+            "|_   _|\\ \\    / /\n" +
+            "  | |   \\ \\  / / \n" +
+            "  | |    \\ \\/ /  \n" +
+            " _| |_    \\  /   \n" +
+            "|_____|    \\/    ";
+
+        String result = RomanPrinter.print(number);
+        //Assert:
+        assertEquals(expected, result);
+    }
 }
