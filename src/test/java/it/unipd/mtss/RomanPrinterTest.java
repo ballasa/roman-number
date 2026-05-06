@@ -122,4 +122,42 @@ public class RomanPrinterTest {
         //Assert:
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintAsciiFifteen(){
+        //Arrange:
+        int number=15;
+        String expected = 
+            "__  __ __      __\n" +
+            "\\ \\/ / \\ \\    / /\n" +
+            " \\  /   \\ \\  / / \n" +
+            " /  \\    \\ \\/ /  \n" +
+            "/ /\\ \\    \\  /   \n" +
+            "\\/  \\/     \\/    ";
+
+        //Act:
+        String result=RomanPrinter.print(number);
+        
+        //Assert:
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testPrintAsciiTwenty(){
+        //Arrange:
+        int number=20;
+        String expected = 
+            "__  __ __  __ \n" +
+            "\\ \\/ / \\ \\/ / \n" +
+            " \\  /   \\  /  \n" +
+            " /  \\   /  \\  \n" +
+            "/ /\\ \\ / /\\ \\ \n" +
+            "\\/  \\/ \\/  \\/ ";
+
+        //Act:
+        String result=RomanPrinter.print(number);
+        
+        //Assert:
+        assertEquals(expected, result);
+    }
 }
