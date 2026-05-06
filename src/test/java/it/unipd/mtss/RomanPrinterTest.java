@@ -84,4 +84,42 @@ public class RomanPrinterTest {
         //Assert:
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintAsciiNine(){
+        //Arrange:
+        int number=9;
+        String expected= 
+            " _____ __  __ \n" +
+            "|_   _|\\ \\/ / \n" +
+            "  | |   \\  /  \n" +
+            "  | |   /  \\  \n" +
+            " _| |_ / /\\ \\ \n" +
+            "|_____|\\/  \\/ ";
+
+        //Act:
+        String result=RomanPrinter.print(number);
+        
+        //Assert:
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testPrintAsciiTen(){
+        //Arrange:
+        int number = 10;
+        String expected= 
+            "__  __ \n" +
+            "\\ \\/ / \n" +
+            " \\  /  \n" +
+            " /  \\  \n" +
+            "/ /\\ \\ \n" +
+            "\\/  \\/ ";
+
+        //Act:
+        String result=RomanPrinter.print(number);
+        
+        //Assert:
+        assertEquals(expected, result);
+    }
 }

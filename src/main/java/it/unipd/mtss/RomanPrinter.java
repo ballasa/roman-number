@@ -77,6 +77,9 @@ public class RomanPrinter {
                 case 'V':
                     matrix[i]=getAscii_V();
                     break;
+                case 'X':
+                    matrix[i]=getAscii_X();
+                    break;
                 default:
                     //Se è una lettera non supportara lancia un errore;
                     throw new IllegalArgumentException("Carattere non supportato: " + c);
@@ -114,6 +117,22 @@ public class RomanPrinter {
             "  \\ \\/ /  ",
             "   \\  /   ",
             "    \\/    "
+        };
+    }
+
+    /**
+     * Fornisce il disegno Ascii della lettera X.
+     * 
+     * @return un array di 6 stringhe che rappresentano le righe della lettera X.
+     */
+    private static String[] getAscii_X(){
+        return new String[]{
+            "__  __ ",
+            "\\ \\/ / ",
+            " \\  /  ",
+            " /  \\  ",
+            "/ /\\ \\ ",
+            "\\/  \\/ "
         };
     }
 }
