@@ -108,7 +108,7 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConvertThirtyfour(){
+    public void testConvertThirtyFour(){
         assertEquals("XXXIV", IntegerToRoman.convert(34));
     }
 
@@ -130,5 +130,25 @@ public class IntegerToRomanTest {
     @Test
     public void testConvertNinetyNine(){
         assertEquals("XCIX", IntegerToRoman.convert(99));
+    }
+
+    @Test
+    public void testConvertOneHundred(){
+        assertEquals("C", IntegerToRoman.convert(100));
+    }
+
+    @Test
+    public void testConvertThreeHundredNinetyNine(){
+        assertEquals("CCCXCIX", IntegerToRoman.convert(399));
+    }
+
+    @Test
+    public void testConvertFourHundred(){
+        assertEquals("CD", IntegerToRoman.convert(400));
+    }
+
+    @Test
+    public void testConvertFiveHundred(){
+        assertEquals("D", IntegerToRoman.convert(500));
     }
 }
