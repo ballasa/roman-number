@@ -121,4 +121,14 @@ public class IntegerToRomanTest {
     public void testConvertFifty(){
         assertEquals("L", IntegerToRoman.convert(50));
     }
+
+    @Test
+    public void testConvertSeventyThree(){
+        assertEquals("LXXIII", IntegerToRoman.convert(73));
+    }
+
+    @Test
+    public void testConvertNinetyNine(){
+        assertEquals("XCIX", IntegerToRoman.convert(99));
+    }
 }
