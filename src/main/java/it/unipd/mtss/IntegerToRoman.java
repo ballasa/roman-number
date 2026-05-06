@@ -6,41 +6,29 @@
 package it.unipd.mtss;
 
 /**
- * Classe per la conversione di numeri arabi in numeri romani
+ * Classe per la conversione di numeri arabi in numeri romani.
  */
 public class IntegerToRoman {
 
     /**
-     * Metodo Che converte un numero arabo nel corrispondente numero romano
+     * Metodo che converte un numero arabo nel corrispondente numero romano.
      * @param number
-     * @return Stringa contentente il numero romano ottenuto
+     * @return Stringa contentente il numero romano ottenuto.
      */
     public static String convert(int number){
+        //Corrispondenza tra numeri romani e arabi (simboli singoli e casi sottrattivi);
+        int[] values={10, 9, 5, 4, 1};
+        String[] romanSymbols={"X", "IX", "V", "IV", "I"};
+
         StringBuilder result = new StringBuilder();
 
-        while(number>=10){
-            result.append("X");
-            number-=10;
-        }
-
-        while(number>=9){
-            result.append("IX");
-            number-=9;
-        }
-        
-        while(number>=5){
-            result.append("V");
-            number-=5;
-        }
-
-        while(number>=4){
-            result.append("IV");
-            number-=4;
-        }
-
-        while(number>=1){
-            result.append("I");
-            number--;
+        //Scansione dell'array dai valori più grandi ai più piccoli;
+        for(int i=0; i<values.length; i++){
+            //Ciclo eseguito finché il numero è maggiore o uguale al valore corrente;
+            while(number>=values[i]){
+                result.append(romanSymbols[i]); //Aggiunto il simbolo corrispondente al risultato;
+                number-=values[i];
+            }
         }
 
         return result.toString();
