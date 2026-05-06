@@ -17,8 +17,8 @@ public class IntegerToRoman {
      */
     public static String convert(int number){
         //Corrispondenza tra numeri romani e arabi (simboli singoli e casi sottrattivi);
-        int[] values={10, 9, 5, 4, 1};
-        String[] romanSymbols={"X", "IX", "V", "IV", "I"};
+        int[] values={50, 40, 10, 9, 5, 4, 1};
+        String[] romanSymbols={"L", "XL", "X", "IX", "V", "IV", "I"};
 
         StringBuilder result = new StringBuilder();
 
