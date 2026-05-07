@@ -19,7 +19,8 @@ public class IntegerToRoman {
 
         // Gestione edge cases
         if (number <= 0 || number > 1000) {
-            throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 1000. Valore inserito: " + number);
+            throw new IllegalArgumentException
+            ("Il numero deve essere compreso tra 1 e 1000. Valore inserito: " + number);
         }
 
         //Corrispondenza tra numeri romani e arabi (simboli singoli e casi sottrattivi);
