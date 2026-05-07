@@ -192,4 +192,23 @@ public class RomanPrinterTest {
         //Act e Assert:
         assertEquals(expected, RomanPrinter.print(number));
     }
+
+    @Test
+    public void testPrintAsciiNinety(){
+        //Arrange:
+        int number = 90;
+        String expected = 
+            "__  __   _____ \n" +
+            "\\ \\/ /  / ____|\n" +
+            " \\  /  | |     \n" +
+            " /  \\  | |     \n" +
+            "/ /\\ \\ | |____ \n" +
+            "\\/  \\/  \\_____|";
+
+        //Act:
+        String result = RomanPrinter.print(number);
+
+        //Assert:
+        assertEquals(expected, result);
+    }
 }

@@ -83,6 +83,9 @@ public class RomanPrinter {
                 case 'L':
                     matrix[i]=getAscii_L();
                     break;
+                case 'C':
+                    matrix[i]=getAscii_C();
+                    break;
                 default:
                     //Se è una lettera non supportara lancia un errore;
                     throw new IllegalArgumentException("Carattere non supportato: " + c);
@@ -152,6 +155,22 @@ public class RomanPrinter {
             "| |     ",
             "| |____ ",
             "|______|"
+        };
+    }
+
+    /**
+     * Fornisce il disegno Ascii della lettera C.
+     * 
+     * @return un array di 6 stringhe che rappresentano le righe della lettera C.
+     */
+    private static String[] getAscii_C(){
+        return new String[]{
+            "  _____ ",
+            " / ____|",
+            "| |     ",
+            "| |     ",
+            "| |____ ",
+            " \\_____|"
         };
     }
 }
