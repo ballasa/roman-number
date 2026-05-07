@@ -8,6 +8,10 @@ package it.unipd.mtss;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+/**
+ * Classe di test per verificare il corretto funzionamento della conversione
+ * da numeri interi (arabi) a numeri romani fino al 1000.
+ */
 public class IntegerToRomanTest {
     @Test
     public void testConvertOne(){
@@ -150,5 +154,15 @@ public class IntegerToRomanTest {
     @Test
     public void testConvertFiveHundred(){
         assertEquals("D", IntegerToRoman.convert(500));
+    }
+
+    @Test
+    public void testConvertNineHunderedNinetyNine(){
+        assertEquals("CMXCIX", IntegerToRoman.convert(999));
+    }
+
+    @Test
+    public void testConvertOneThousand(){
+        assertEquals("M", IntegerToRoman.convert(1000));
     }
 }
