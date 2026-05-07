@@ -86,6 +86,9 @@ public class RomanPrinter {
                 case 'C':
                     matrix[i]=getAscii_C();
                     break;
+                case 'D':
+                    matrix[i]=getAscii_D();
+                    break;
                 default:
                     //Se è una lettera non supportara lancia un errore;
                     throw new IllegalArgumentException("Carattere non supportato: " + c);
@@ -171,6 +174,22 @@ public class RomanPrinter {
             "| |     ",
             "| |____ ",
             " \\_____|"
+        };
+    }
+
+    /**
+     * Fornisce il disegno Ascii della lettera D.
+     * 
+     * @return un array di 6 stringhe che rappresentano le righe della lettera D.
+     */
+    private static String[] getAscii_D(){
+        return new String[]{
+            " _____  ",
+            "|  __ \\ ",
+            "| |  | |",
+            "| |  | |",
+            "| |__| |",
+            "|_____/ "
         };
     }
 }
