@@ -249,4 +249,23 @@ public class RomanPrinterTest {
         //Assert:
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintAsciiOneThousand() {
+        //Arrange:
+        int number = 1000;
+        String expected = 
+            " __  __ \n" +
+            "|  \\/  |\n" +
+            "| \\  / |\n" +
+            "| |\\/| |\n" +
+            "| |  | |\n" +
+            "|_|  |_|";
+
+        //Act:
+        String result = RomanPrinter.print(number);
+        
+        //Assert:
+        assertEquals(expected, result);
+    }
 }
