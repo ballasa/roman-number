@@ -211,4 +211,42 @@ public class RomanPrinterTest {
         //Assert:
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testPrintAsciiFourHundred(){
+        //Arrange:
+        int number=400;
+        String expected= 
+            "  _____  _____  \n" +
+            " / ____||  __ \\ \n" +
+            "| |     | |  | |\n" +
+            "| |     | |  | |\n" +
+            "| |____ | |__| |\n" +
+            " \\_____||_____/ ";
+
+        //Act:
+        String result=RomanPrinter.print(number);
+
+        //Assert:
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testPrintAsciiFiveHundred(){
+        //Arrange:
+        int number=500;
+        String expected= 
+            " _____  \n" +
+            "|  __ \\ \n" +
+            "| |  | |\n" +
+            "| |  | |\n" +
+            "| |__| |\n" +
+            "|_____/ ";
+
+        //Act:
+        String result = RomanPrinter.print(number);
+
+        //Assert:
+        assertEquals(expected, result);
+    }
 }
