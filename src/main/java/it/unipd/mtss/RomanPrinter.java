@@ -89,6 +89,9 @@ public class RomanPrinter {
                 case 'D':
                     matrix[i]=getAscii_D();
                     break;
+                case 'M':
+                    matrix[i]=getAscii_M();
+                    break;
                 default:
                     //Se è una lettera non supportara lancia un errore;
                     throw new IllegalArgumentException("Carattere non supportato: " + c);
@@ -190,6 +193,22 @@ public class RomanPrinter {
             "| |  | |",
             "| |__| |",
             "|_____/ "
+        };
+    }
+
+    /**
+     * Fornisce il disegno Ascii della lettera M.
+     * 
+     * @return un array di 6 stringhe che rappresentano le righe della lettera M.
+     */
+    private static String[] getAscii_M() {
+        return new String[]{
+            " __  __ ",
+            "|  \\/  |",
+            "| \\  / |",
+            "| |\\/| |",
+            "| |  | |",
+            "|_|  |_|"
         };
     }
 }
