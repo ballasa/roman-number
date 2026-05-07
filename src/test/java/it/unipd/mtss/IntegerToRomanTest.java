@@ -6,6 +6,7 @@
 package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Test;
 
 /**
@@ -164,5 +165,59 @@ public class IntegerToRomanTest {
     @Test
     public void testConvertOneThousand(){
         assertEquals("M", IntegerToRoman.convert(1000));
+    }
+
+    // TEST EDGE CASES
+
+    @Test
+    public void testNumberZero() {
+        // Arrange
+        int number = 0;
+
+        try {
+            // Act
+            IntegerToRoman.convert(number);
+            
+            // Se la conversione non lancia l'errore, il test fallisce qui
+            fail("Ci si aspettava una IllegalArgumentException per l'input 0"); 
+            
+        } catch (IllegalArgumentException e) {
+            // Assert
+            assertEquals("Il numero deve essere compreso tra 1 e 1000. Valore inserito: 0", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testNegativeNumber() {
+        // Arrange
+        int number = -1;
+
+        try {
+            // Act
+            IntegerToRoman.convert(number);
+            
+            fail("Ci si aspettava una IllegalArgumentException per l'input -1"); 
+            
+        } catch (IllegalArgumentException e) {
+            // Assert
+            assertEquals("Il numero deve essere compreso tra 1 e 1000. Valore inserito: -1", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testNumberTooHigh() {
+        // Arrange
+        int number = 1001;
+
+        try {
+            // Act
+            IntegerToRoman.convert(number);
+            
+            fail("Ci si aspettava una IllegalArgumentException per l'input 1001"); 
+            
+        } catch (IllegalArgumentException e) {
+            // Assert
+            assertEquals("Il numero deve essere compreso tra 1 e 1000. Valore inserito: 1001", e.getMessage());
+        }
     }
 }

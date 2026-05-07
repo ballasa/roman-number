@@ -16,6 +16,13 @@ public class IntegerToRoman {
      * @return Stringa contentente il numero romano ottenuto.
      */
     public static String convert(int number){
+
+        // Gestione edge cases
+        if (number <= 0 || number > 1000) {
+            throw new IllegalArgumentException
+            ("Il numero deve essere compreso tra 1 e 1000. Valore inserito: " + number);
+        }
+
         //Corrispondenza tra numeri romani e arabi (simboli singoli e casi sottrattivi);
         int[] values={1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] romanSymbols={"M", "CM", "D", "CD", "C", "XC",
