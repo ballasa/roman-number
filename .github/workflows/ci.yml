@@ -34,3 +34,11 @@ jobs:
       # Analisi statica (fase di package)
       - name: Analisi statica
         run: mvn -B checkstyle:check --file pom.xml
+
+      # Code coverage 
+      - name: Code coverage
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          file: target/site/jacoco/jacoco.xml
+          format: jacoco
