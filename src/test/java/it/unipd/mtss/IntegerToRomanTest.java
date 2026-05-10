@@ -15,159 +15,160 @@ import org.junit.Test;
  */
 public class IntegerToRomanTest {
     @Test
-    public void testConvertOne(){
-        //Arrange (configurazione):
-        int number=1;
+    public void testConvertOne() {
+        // Arrange (configurazione):
+        int number = 1;
 
-        //Act (esecuzione del metodo da testare):
-        String result=IntegerToRoman.convert(number);
+        // Act (esecuzione del metodo da testare):
+        String result = IntegerToRoman.convert(number);
 
-        //Assert (verifica):
+        // Assert (verifica):
         assertEquals("I", result);
     }
 
     @Test
-    public void testConvertTwo(){
-        //Arrange:
-        int number=2;
+    public void testConvertTwo() {
+        // Arrange:
+        int number = 2;
 
-        //Act:
-        String result=IntegerToRoman.convert(number);
+        // Act:
+        String result = IntegerToRoman.convert(number);
 
-        //Assert:
+        // Assert:
         assertEquals("II", result);
     }
 
     @Test
-    public void testConvertThree(){
-        //Arrange:
-        int number=3;
+    public void testConvertThree() {
+        // Arrange:
+        int number = 3;
 
-        //Act:
-        String result=IntegerToRoman.convert(number);
+        // Act:
+        String result = IntegerToRoman.convert(number);
 
-        //Assert:
+        // Assert:
         assertEquals("III", result);
     }
 
     @Test
-    public void testConvertFour(){
-        //Arrange:
+    public void testConvertFour() {
+        // Arrange:
         int number = 4;
 
-        //Act:
+        // Act:
         String result = IntegerToRoman.convert(number);
 
-        //Assert:
+        // Assert:
         assertEquals("IV", result);
     }
 
     @Test
-    public void testConvertFive(){
-        //Arrange:
+    public void testConvertFive() {
+        // Arrange:
         int number = 5;
 
-        //Act:
+        // Act:
         String result = IntegerToRoman.convert(number);
 
-        //Assert:
+        // Assert:
         assertEquals("V", result);
     }
 
     @Test
-    public void testConvertSix(){
-        //Arrange:
+    public void testConvertSix() {
+        // Arrange:
         int number = 6;
 
-        //Act:
+        // Act:
         String result = IntegerToRoman.convert(number);
 
-        //Assert:
+        // Assert:
         assertEquals("VI", result);
     }
 
     @Test
-    public void testConvertSeven(){
-        //Pattern AAA compatto:
+    public void testConvertSeven() {
+        // Pattern AAA compatto:
         assertEquals("VII", IntegerToRoman.convert(7));
     }
 
     @Test
-    public void testConvertNine(){
+    public void testConvertNine() {
         assertEquals("IX", IntegerToRoman.convert(9));
     }
 
     @Test
-    public void testConvertTen(){
+    public void testConvertTen() {
         assertEquals("X", IntegerToRoman.convert(10));
     }
 
     @Test
-    public void testConvertFifteen(){
+    public void testConvertFifteen() {
         assertEquals("XV", IntegerToRoman.convert(15));
     }
 
     @Test
-    public void testConvertTwenty(){
+    public void testConvertTwenty() {
         assertEquals("XX", IntegerToRoman.convert(20));
     }
 
     @Test
-    public void testConvertThirtyFour(){
+    public void testConvertThirtyFour() {
         assertEquals("XXXIV", IntegerToRoman.convert(34));
     }
 
     @Test
-    public void testConvertFortyNine(){
+    public void testConvertFortyNine() {
         assertEquals("XLIX", IntegerToRoman.convert(49));
     }
 
     @Test
-    public void testConvertFifty(){
+    public void testConvertFifty() {
         assertEquals("L", IntegerToRoman.convert(50));
     }
 
     @Test
-    public void testConvertSeventyThree(){
+    public void testConvertSeventyThree() {
         assertEquals("LXXIII", IntegerToRoman.convert(73));
     }
 
     @Test
-    public void testConvertNinetyNine(){
+    public void testConvertNinetyNine() {
         assertEquals("XCIX", IntegerToRoman.convert(99));
     }
 
     @Test
-    public void testConvertOneHundred(){
+    public void testConvertOneHundred() {
         assertEquals("C", IntegerToRoman.convert(100));
     }
 
     @Test
-    public void testConvertThreeHundredNinetyNine(){
+    public void testConvertThreeHundredNinetyNine() {
         assertEquals("CCCXCIX", IntegerToRoman.convert(399));
     }
 
     @Test
-    public void testConvertFourHundred(){
+    public void testConvertFourHundred() {
         assertEquals("CD", IntegerToRoman.convert(400));
     }
 
     @Test
-    public void testConvertFiveHundred(){
+    public void testConvertFiveHundred() {
         assertEquals("D", IntegerToRoman.convert(500));
     }
 
     @Test
-    public void testConvertNineHunderedNinetyNine(){
+    public void testConvertNineHunderedNinetyNine() {
         assertEquals("CMXCIX", IntegerToRoman.convert(999));
     }
 
     @Test
-    public void testConvertOneThousand(){
+    public void testConvertOneThousand() {
         assertEquals("M", IntegerToRoman.convert(1000));
     }
 
-    // TEST EDGE CASES
+    
+    // TEST EDGE CASES:
 
     @Test
     public void testNumberZero() {
@@ -177,10 +178,10 @@ public class IntegerToRomanTest {
         try {
             // Act
             IntegerToRoman.convert(number);
-            
+
             // Se la conversione non lancia l'errore, il test fallisce qui
-            fail("Ci si aspettava una IllegalArgumentException per l'input 0"); 
-            
+            fail("Ci si aspettava una IllegalArgumentException per l'input 0");
+
         } catch (IllegalArgumentException e) {
             // Assert
             assertEquals("Il numero deve essere compreso tra 1 e 1000. Valore inserito: 0", e.getMessage());
@@ -195,9 +196,9 @@ public class IntegerToRomanTest {
         try {
             // Act
             IntegerToRoman.convert(number);
-            
-            fail("Ci si aspettava una IllegalArgumentException per l'input -1"); 
-            
+
+            fail("Ci si aspettava una IllegalArgumentException per l'input -1");
+
         } catch (IllegalArgumentException e) {
             // Assert
             assertEquals("Il numero deve essere compreso tra 1 e 1000. Valore inserito: -1", e.getMessage());
@@ -212,9 +213,9 @@ public class IntegerToRomanTest {
         try {
             // Act
             IntegerToRoman.convert(number);
-            
-            fail("Ci si aspettava una IllegalArgumentException per l'input 1001"); 
-            
+
+            fail("Ci si aspettava una IllegalArgumentException per l'input 1001");
+
         } catch (IllegalArgumentException e) {
             // Assert
             assertEquals("Il numero deve essere compreso tra 1 e 1000. Valore inserito: 1001", e.getMessage());
