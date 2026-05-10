@@ -9,7 +9,7 @@
 
 [![Java CI](https://github.com/ballasa/roman-number/actions/workflows/ci.yml/badge.svg)](https://github.com/ballasa/roman-number/actions/workflows/ci.yml)
 
-[![Coverage Status](https://coveralls.io/repos/github/ballasa/roman-number/badge.svg?branch=feature/code-revision)](https://coveralls.io/github/ballasa/roman-number?branch=feature/code-revision)
+[![Coverage Status](https://coveralls.io/repos/github/ballasa/roman-number/badge.svg?branch=feature%2Fcode-revision)](https://coveralls.io/github/ballasa/roman-number?branch=feature/code-revision)
 
 ## Descrizione
 Prova pratica per il corso di Metodi e Tecnologie per lo Sviluppo Software. Convertitore per i primi 1000 numeri interi da arabi a romani con stampa in ASCII art. Lo sviluppo è stato guidato dai principi di Test-Driven Development (TDD) e Continuous Integration.
